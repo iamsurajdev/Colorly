@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import classes from "./CustomColors.module.css";
 import { SketchPicker } from "react-color";
 
 const CustomColors = () => {
@@ -9,7 +10,7 @@ const CustomColors = () => {
     a: "1",
   });
   return (
-    <div>
+    <div className={classes.main}>
       <SketchPicker
         width={500}
         disableAlpha={false}

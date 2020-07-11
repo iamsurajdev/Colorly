@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import classes from "./RandomColors.module.css";
+
 const RandomColors = () => {
   const [colorFormat, setColorFormat] = useState("hex");
   const [colorNames] = useState([
@@ -35,43 +38,40 @@ const RandomColors = () => {
       toast.success(`You have copied ${color} value successfully`, {
         position: toast.POSITION.TOP_RIGHT,
       });
-      //   setMessage(true);
-      //   setTimeout(() => {
-      //     setMessage(false);
-      //   }, 1000);
     }
   };
+
   return (
-    <div className="row">
+    <div className={classes.main}>
       <ToastContainer />
-
-      <select
-        value={colorFormat}
-        onChange={(e) => {
-          setColorFormat(e.target.value);
-        }}
-      >
-        <option value="hex">HEX</option>
-        <option value="rgb">RGB</option>
-        {/* <option>RGBA</option> */}
-      </select>
-
-      {colorNames.map((color) => {
-        const colorName = colorFormat === "hex" ? color.name : color.rgb;
-        return (
-          <div
-            className="item"
-            key={color.name}
-            style={{ background: color.name }}
-            onClick={() => copyColor(colorName)}
-          >
-            <div>
-              <div>{colorName}</div>
-              <button className="btn">Copy</button>
+      <div className={classes.select}>
+        <select
+          value={colorFormat}
+          onChange={(e) => {
+            setColorFormat(e.target.value);
+          }}
+        >
+          <option value="hex">HEX</option>
+          <option value="rgb">RGB</option>
+        </select>
+      </div>
+      <div className={classes.colorsDiv}>
+        {colorNames.map((color) => {
+          const colorName = colorFormat === "hex" ? color.name : color.rgb;
+          return (
+            <div
+              className={classes.itemBlock}
+              key={color.name}
+              style={{ background: color.name }}
+              onClick={() => copyColor(colorName)}
+            >
+              <div>
+                <div>{colorName}</div>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };
