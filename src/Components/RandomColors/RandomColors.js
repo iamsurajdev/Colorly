@@ -27,6 +27,7 @@ const RandomColors = () => {
     { name: "#03A9F4", rgb: "rgb(3, 169, 244)" },
     { name: "#01579B", rgb: "rgb(1, 87, 155)" },
     { name: "#512DA8", rgb: "rgb(81, 45, 168)" },
+    { name: "#3C8784", rgb: "rgb(60,135,132)" },
   ]);
 
   const copyColor = (colorVal) => {
