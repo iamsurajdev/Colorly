@@ -38,19 +38,21 @@ function App() {
       </p>
 
       <div className={classes.buttonsDiv}>
-        <button
-          style={
-            colorShades
-              ? { backgroundColor: "rgb(72, 68, 97)", color: "#fff" }
-              : null
-          }
-          onClick={switchToColorShades}
-        >
-          Color Shades{" "}
-          <span role="img" aria-label="emoji">
-            🍫
-          </span>{" "}
-        </button>
+        {window.innerWidth > 560 ? (
+          <button
+            style={
+              colorShades
+                ? { backgroundColor: "rgb(72, 68, 97)", color: "#fff" }
+                : null
+            }
+            onClick={switchToColorShades}
+          >
+            Color Shades{" "}
+            <span role="img" aria-label="emoji">
+              🍫
+            </span>{" "}
+          </button>
+        ) : null}
         <button
           style={
             randomColors
@@ -65,20 +67,22 @@ function App() {
           </span>
           selected Colours
         </button>
-        <button
-          style={
-            customColors
-              ? { backgroundColor: "rgb(72, 68, 97)", color: "#fff" }
-              : null
-          }
-          onClick={switchToCustomColors}
-        >
-          Make{" "}
-          <span role="img" aria-label="emoji">
-            👨‍🏭
-          </span>{" "}
-          your own colour
-        </button>
+        {window.innerWidth > 560 ? (
+          <button
+            style={
+              customColors
+                ? { backgroundColor: "rgb(72, 68, 97)", color: "#fff" }
+                : null
+            }
+            onClick={switchToCustomColors}
+          >
+            Make{" "}
+            <span role="img" aria-label="emoji">
+              👨‍🏭
+            </span>{" "}
+            your own colour
+          </button>
+        ) : null}
       </div>
 
       {colorShades && <ColorShades />}

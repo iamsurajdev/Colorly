@@ -67,7 +67,8 @@ const RandomColors = () => {
               onClick={() => copyColor(colorName)}
             >
               <div>
-                <div>{colorName}</div>
+                <div className={classes.colorName}>{colorName}</div>
+                <div className={classes.clickToCopy}>Copy</div>
               </div>
             </div>
           );

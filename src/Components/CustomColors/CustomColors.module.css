@@ -4,3 +4,47 @@
   margin-top: 20px;
   padding-bottom: 20px;
 }
+
+.colorsDiv {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.itemBlock {
+  height: 150px;
+  width: 150px;
+  margin: 5px;
+  border-radius: 2px;
+  text-align: center;
+  color: rgb(240, 240, 240);
+  box-shadow: 2px 2px 10px #647e99;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2 ease-in;
+}
+
+.clickToCopy {
+  width: fit-content;
+  border-radius: 30px;
+  padding: 5px;
+  background-color: white;
+  color: #1d1d1d;
+  display: none;
+}
+
+.itemBlock:hover .colorName {
+  display: none;
+}
+
+.itemBlock:hover .clickToCopy {
+  display: inline;
+}
+
+.itemBlock:hover {
+  box-shadow: 2px 2px 10px #475b70;
+}

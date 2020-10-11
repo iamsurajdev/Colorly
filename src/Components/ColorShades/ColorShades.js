@@ -20,8 +20,12 @@ const ColorShades = () => {
   return (
     <div className={classes.main}>
       <ToastContainer />
+      <div>
+        <h4 style={{ textAlign: "center" }}>Click to copy</h4>
+      </div>
       <SwatchesPicker
-        width={1000}
+        width={550}
+        height={300}
         onChange={(color) => {
           copyColor(color.hex);
         }}
