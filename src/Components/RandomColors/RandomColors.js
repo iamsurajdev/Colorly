@@ -28,6 +28,15 @@ const RandomColors = () => {
     { name: "#01579B", rgb: "rgb(1, 87, 155)" },
     { name: "#512DA8", rgb: "rgb(81, 45, 168)" },
     { name: "#3C8784", rgb: "rgb(60,135,132)" },
+    { name: "#38581c", rgb: "rgb(56,88,28,1)" },
+    { name: "#698e7e", rgb: "rgb(105,142,126,1)" },
+    { name: "#f63035", rgb: "rgb(246,48,53,1)" },
+    { name: "#e1f529", rgb: "rgb(225,245,41,1)" },
+    { name: "#7aefc7", rgb: "rgb(122,239,199,1)" },
+    { name: "#9013fe", rgb: "rgb(144,19,254,1)" },
+    { name: "#a71627", rgb: "rgb(167,22,39,1)" },
+    { name: "#12b63f", rgb: "rgb(18,182,63,1)" },
+    { name: "#a4b5a8", rgb: "rgb(164,181,168,1)" },
   ]);
 
   const copyColor = (colorVal) => {

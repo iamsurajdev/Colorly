@@ -29,7 +29,7 @@ function App() {
       <p>
         a product by{" "}
         <a
-          href="https://surajdev.netlify.app/"
+          href="https://iamsurajdev.netlify.app/"
           rel="noopener noreferrer"
           target="_blank"
         >
